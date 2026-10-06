@@ -161,7 +161,8 @@ export default function Projects() {
                             {item}
                           </span>
                         ))
-                      : (project.tools as string)
+                      : project.tools
+                        ? (project.tools as string)
                           .split(",")
                           .map((item: string) => item.trim())
                           .filter(Boolean)
@@ -172,7 +173,8 @@ export default function Projects() {
                             >
                               {item}
                             </span>
-                          ))}
+                          ))
+                        : null}
                   </div>
                 </div>
               </div>
