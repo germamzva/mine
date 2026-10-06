@@ -38,7 +38,8 @@ export default function Experiences({ resume }: Props) {
       const dot = item.querySelector<HTMLElement>(".timeline-dot");
       if (!dot) return;
 
-      const fromX = item.classList.contains("ani_slideLeftIn") ? -100 : 100;
+      const isMobile = window.innerWidth < 768;
+      const fromX = isMobile ? 0 : (item.classList.contains("ani_slideLeftIn") ? -100 : 100);
       const progressTarget = (index + 1) / items.length;
 
       timeline
