@@ -65,7 +65,7 @@ export default function Experiences({ resume }: Props) {
 
   return (
     <div className="pt-30">
-      <h1 className="font-bold font-manrope text-white mb-15 text-fsize2">
+      <h1 className="font-bold font-manrope text-white mb-15 text-fsize2 px-5 sm:px-0 md:px-0">
         <span className="text-green-400 text-5xl">.</span>Works Experiences
       </h1>
 
