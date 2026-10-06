@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <>
       {/* center this ssection */}
-      <div className="flex justify-center h-screen">
+      <div className="flex justify-center h-auto md:h-screen">
         <section className="flex flex-col py-10 md:py-0 md:flex-row items-center justify-between">
           <div className="w-full md:w-3/5 sm:w-full text-center md:text-left">
             <h1 className="font-bold font-manrope text-white dark:text-green-400 mb-5 capitalize text-center md:text-left">
