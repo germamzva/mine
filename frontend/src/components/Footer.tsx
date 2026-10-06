@@ -156,8 +156,12 @@ export default function Footer() {
       </div>
 
       <div className="flex items-center justify-center gap-2 mt-15 px-5 sm:px-0 md:px-0">
-        <p className="font-roboto text-white dark:text-slate-800 text-sm text-center">
-          © {new Date().getFullYear()} <Link to="/">GCODES</Link>. All Rights Reserved. Designed and built with care by GCODES
+        <p className="font-inter text-white dark:text-slate-800 text-sm text-center group">
+          © {new Date().getFullYear()} <Link to="/">
+            <span className="text-green-400 dark:text-green-600 group-hover:-translate-x-0.5 transition-transform">&lt;</span>
+            <span className="font-mono">GCODES</span>
+            <span className="text-green-400 dark:text-green-600 group-hover:translate-x-0.5 transition-transform">&gt;</span>
+          </Link>. All Rights Reserved. Designed and built with care by <span className="text-white font-mono">&lt;GCODES&gt;</span>
         </p>
       </div>
     </div >

@@ -148,8 +148,12 @@ export default function Navbar() {
       <header className={`mx-auto max-w-7xl fixed top-0 left-0 right-0 mt-10 z-50 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full mt-0!"}`}>
         <div className={`flex flex-row justify-between items-center bg-slate-600/20 dark:bg-amber-50 border-slate-400 backdrop-blur-2xl py-5 px-5 relative z-100 ${showMenu ? "active_dropdown_menu rounded-t-[40px]" : "active_dropdown_menu_hide rounded-full"}`}>
           <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(0,255,120,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,120,0.08)_1px,transparent_1px)] bg-size-[40px_40px] z-[-1]" />
-          <div className="font-sora font-xbold uppercase text-2xl sm:text-3xl md:text-4xl text-green-400">
-            <Link to="/">{`<GCodes>`}</Link>
+          <div className="font-mono font-xbold uppercase text-2xl sm:text-3xl md:text-4xl tracking-tight text-white dark:text-slate-900">
+            <Link to="/">
+              <span className="text-green-400 dark:text-green-600 group-hover:-translate-x-0.5 transition-transform">&lt;</span>
+              <span>GCODES</span>
+              <span className="text-green-400 dark:text-green-600 group-hover:translate-x-0.5 transition-transform">&gt;</span>
+            </Link>
           </div>
           <div className="flex flex-row items-center gap-5">
             <nav
@@ -213,36 +217,36 @@ export default function Navbar() {
                       <path d="m19.07 4.93-1.41 1.41" />
                     </svg>
                   )}
-                </button>   
+                </button>
               </>
             )}
 
-                  {/* <button className="md:hidden" onClick={(e) => handleCloseMenu(e)}>
+            {/* <button className="md:hidden" onClick={(e) => handleCloseMenu(e)}>
               <span>☰</span>
             </button> */}
 
             <button
-                  onClick={toggleTheme}
-                  className="text-white dark:text-slate-800 hover:text-green-500 dark:hover:text-green-500 transition font-bold py-2 rounded-full font-roboto uppercase tracking-widest cursor-pointer md:hidden md:flex"
-                >
-                  {theme === "light" ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-moon preview-icon">
-                      <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sun preview-icon">
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M12 2v2" />
-                      <path d="M12 20v2" />
-                      <path d="m4.93 4.93 1.41 1.41" />
-                      <path d="m17.66 17.66 1.41 1.41" />
-                      <path d="M2 12h2" />
-                      <path d="M20 12h2" />
-                      <path d="m6.34 17.66-1.41 1.41" />
-                      <path d="m19.07 4.93-1.41 1.41" />
-                    </svg>
-                  )}
-                </button>
+              onClick={toggleTheme}
+              className="text-white dark:text-slate-800 hover:text-green-500 dark:hover:text-green-500 transition font-bold py-2 rounded-full font-roboto uppercase tracking-widest cursor-pointer md:hidden md:flex"
+            >
+              {theme === "light" ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-moon preview-icon">
+                  <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-sun preview-icon">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="m6.34 17.66-1.41 1.41" />
+                  <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+              )}
+            </button>
 
             <button
               type="button"

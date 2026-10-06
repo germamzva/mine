@@ -67,7 +67,7 @@ export default function Home() {
           </div>
           <div className="w-full md:w-1/3 mt-20 md:mt-0 sm:w-full flex items-center justify-center sm:justify-end">
             <div className="flex items-center justify-center">
-              <div className="relative w-full rounded-3xl border border-white/10 dark:border-slate-300/20 bg-slate-600/20 dark:bg-amber-50/30 overflow-hidden">
+              <div className="relative w-full rounded-3xl border border-white/10 dark:border-slate-300/20 bg-slate-600/20 dark:bg-amber-50/30 overflow-hidden group">
                 {/* Background Grid */}
                 <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(0,255,120,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,120,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
