@@ -34,7 +34,7 @@ import preferrenceRoutes from "./routes/preferrence.routes.js";
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: ["http://localhost:5173", "http://localhost:5174", "https://mine-mifd-three.vercel.app"],
     credentials: true,
   }),
 );
