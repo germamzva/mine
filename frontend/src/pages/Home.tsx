@@ -69,26 +69,14 @@ export default function Home() {
               {/* Background Grid */}
               <div className="absolute inset-0 opacity-20 bg-[linear-gradient(rgba(0,255,120,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,120,0.08)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-              <div className="relative z-10 p-0">
+              <div className="relative z-10 p-0 w-full h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-2xl">
                 <img
                   src={Coding}
                   alt="Coding"
-                  className="w-full h-full object-cover"
+                  className="block w-full h-full object-cover grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
                 />
 
-                {/* Email */}
-                {/* <div className="mt-8 text-center">
-                  <a
-                    href="mailto:themesflat@gmail.com"
-                    className="text-xl text-white underline underline-offset-4 hover:text-green-400 transition"
-                  >
-                    ranfeche@gmail.com
-                  </a>
-
-                  <p className="mt-4 text-gray-500 text-sm">
-                    Esmeralda Residenses, Apokon, Tagum City
-                  </p>
-                </div> */}
+                <div className="absolute inset-0 w-full h-full bg-linear-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
               </div>
             </div>
           </div>

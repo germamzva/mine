@@ -13,7 +13,7 @@ const SkillType = {
   others: "others",
 } as const;
 
-type SkillType = typeof SkillType[keyof typeof SkillType];
+type SkillType = (typeof SkillType)[keyof typeof SkillType];
 
 export default function Skills({ aniClass }: Props) {
 
