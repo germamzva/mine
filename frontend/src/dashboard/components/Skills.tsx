@@ -19,12 +19,14 @@ type skillPayload = {
   };
 };
 
-enum SkillType {
-  frontend = "frontend",
-  backend = "backend",
-  cms = "cms",
-  others = "others",
-}
+const SkillType = {
+  frontend: "frontend",
+  backend: "backend",
+  cms: "cms",
+  others: "others",
+} as const;
+
+type SkillType = (typeof SkillType)[keyof typeof SkillType];
 
 export default function Skills() {
   const queryClient = useQueryClient();

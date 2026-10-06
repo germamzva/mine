@@ -152,8 +152,8 @@ export default function Projects() {
                     <span>Tech Stack & Deliverables</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {project.tools
-                      ?.split(",")
+                    {(project.tools || "")
+                      .split(",")
                       .map((item: string) => item.trim())
                       .filter(Boolean)
                       .map((item: string, index: number) => (

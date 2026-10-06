@@ -134,8 +134,8 @@ export default function Education() {
                 </p>
 
                 <p className="text-white font-manrope text-fsize3">
-                  SY: {moment(education.school_start).format("MMMM DD YYYY")} -
-                  {moment(education.school_end).format("MMMM DD YYYY")}
+                  SY: {moment(education.start_year).format("MMMM DD YYYY")} -
+                  {moment(education.end_year).format("MMMM DD YYYY")}
                 </p>
               </div>
             </div>

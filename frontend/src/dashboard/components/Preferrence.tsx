@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 // types
-import type { Preferrence } from "../types/preferrence.type.ts";
+import type { Preferrence } from "../../types/preferrence.type.ts";
 
 // queries
 import { getPreferrences } from "../../queries/preferrence.ts";

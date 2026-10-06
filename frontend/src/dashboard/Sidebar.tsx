@@ -18,8 +18,6 @@ import { Link } from "react-router";
 // components
 import UploadPrimaryImg from "./components/modals/UploadPrimaryImg";
 
-// assets
-import Blank from "../assets/blank.png";
 import { useQuery } from "@tanstack/react-query";
 
 // types

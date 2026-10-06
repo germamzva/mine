@@ -1,7 +1,7 @@
 import apiRequest from "../utils/apiRequest";
 
 // type
-import type { Contact, ContactSubmission } from "../types/contact.type";
+import type { ContactSubmission } from "../types/contact.type";
 
 export const getContact = async () => {
     // eslint-disable-next-line

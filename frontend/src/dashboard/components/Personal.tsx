@@ -13,7 +13,7 @@ import type { PersonalInfo, LinkField } from "../../types/personal.type.ts";
 import { useCurrentUser } from "../../utils/useCurrentUser.ts";
 
 export default function Personal() {
-  const { data: user, isLoading } = useCurrentUser();
+  const { data: user } = useCurrentUser();
   const queryClient = useQueryClient();
   const [aboutSummary, setAboutSummary] = useState<string>("");
   const [linksFields, setLinksFields] = useState<LinkField[]>([

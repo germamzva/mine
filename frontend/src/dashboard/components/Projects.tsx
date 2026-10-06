@@ -5,7 +5,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 // queries
 import {
   getProjects,
-  addProjects,
   removeProjects,
 } from "../../queries/projects.queries.ts";
 

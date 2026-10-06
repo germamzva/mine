@@ -1,5 +1,3 @@
-import React from "react";
-
 interface EditPreferreceProps {
   modalOpenEdit: boolean;
   setModalOpenEdit: (open: boolean) => void;
