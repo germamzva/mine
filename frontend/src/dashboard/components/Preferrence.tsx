@@ -58,14 +58,14 @@ export default function Preferrence() {
                         <div className="border-white/10 bg-slate-600/20 border p-5 mb-2 rounded-lg" key={preferrence._id}>
                             <div className="flex justify-end gap-5">
                                 {/* // add delete icon svg */}
-                                <button onClick={(e) => handleSubmitDelete(preferrence._id, e)}>
+                                <button onClick={(e) => preferrence._id && handleSubmitDelete(preferrence._id, e)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x preview-icon h-4 w-4 text-white hover:text-green-400 cursor-pointer">
                                         <path d="M18 6 6 18" /><path d="m6 6 12 12" />
                                     </svg>
                                 </button>
 
                                 {/* add edit icon svg */}
-                                <button onClick={(e) => handleSubmitPreferreceEdit(preferrence._id, e)}>
+                                <button onClick={(e) => preferrence._id && handleSubmitPreferreceEdit(preferrence._id, e)}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-square-pen preview-icon h-4 w-4 text-white hover:text-green-400 cursor-pointe">
                                         <path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
                                         <path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z" />

@@ -37,7 +37,7 @@ export default function Gsap() {
           boxShadow: "0 0 15px white",
           duration: 0.3,
           scrollTrigger: {
-            trigger: dot,
+            trigger: dot as gsap.DOMTarget,
             start: "top center",
             toggleActions: "play reverse play reverse",
           },

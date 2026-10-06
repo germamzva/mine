@@ -6,7 +6,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createContact, getCaptchaWithCSRF } from "../queries/contact.queries";
 
 // types
-import type { Contact, ContactSubmission } from "../types/contact.type";
+import type { ContactSubmission } from "../types/contact.type";
 
 type Props = {
   animationClass?: string;
@@ -43,29 +43,22 @@ export default function Contact({ animationClass }: Props) {
       setErrorStatus("success");
     },
     onError: (error) => {
-      if (axios.isAxiosError(error) && error.response?.data) {
-        const data = error.response.data as {
-          message?: string;
-          errMessage?: string[];
-          emptyFields?: string[];
+      const data = error as {
+        response?: {
+          data?: {
+            message?: string;
+            errMessage?: string[];
+            emptyFields?: string[];
+          };
         };
+      };
 
-        setEmptyFields(data.emptyFields ?? []);
-        // setErrorMessage(
-        //   data.errMessage?.length ? data.errMessage.join(" \n") : "",
-        // );
+      setEmptyFields(data.response?.data?.emptyFields ?? []);
 
-        // if (data.errMessage?.length) {
-        //   return;
-        // }
-
-        // setErrorMessage(data.errMessage?.length ? data.errMessage[0] : "");
-
-        if (data.message) {
-          setErrorMessage(data.message);
-          setErrorStatus("error");
-          return;
-        }
+      if (data.response?.data?.message) {
+        setErrorMessage(data.response.data.message);
+        setErrorStatus("error");
+        return;
       }
 
       setErrorMessage("Something went wrong. Please try again.");

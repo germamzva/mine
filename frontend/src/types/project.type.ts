@@ -2,7 +2,7 @@ export type Project = {
   _id?: string;
   name: string;
   description: string;
-  tools?: string;
+  tools?: string | string[];
   image?: string;
   link: string;
 };

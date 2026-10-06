@@ -152,18 +152,27 @@ export default function Projects() {
                     <span>Tech Stack & Deliverables</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {(project.tools || "")
-                      .split(",")
-                      .map((item: string) => item.trim())
-                      .filter(Boolean)
-                      .map((item: string, index: number) => (
-                        <span
-                          key={`${item}-${index}`}
-                          className="px-2.5 font-inter py-1 text-xs rounded-lg bg-slate-800/90 text-slate-300 border border-slate-700/60 hover:border-green-500/40 hover:text-green-400 transition-colors"
-                        >
-                          {item}
-                        </span>
-                      ))}
+                    {Array.isArray(project.tools)
+                      ? project.tools.map((item: string, index: number) => (
+                          <span
+                            key={`${item}-${index}`}
+                            className="px-2.5 font-inter py-1 text-xs rounded-lg bg-slate-800/90 text-slate-300 border border-slate-700/60 hover:border-green-500/40 hover:text-green-400 transition-colors"
+                          >
+                            {item}
+                          </span>
+                        ))
+                      : project.tools
+                        ?.split(",")
+                        .map((item: string) => item.trim())
+                        .filter(Boolean)
+                        .map((item: string, index: number) => (
+                          <span
+                            key={`${item}-${index}`}
+                            className="px-2.5 font-inter py-1 text-xs rounded-lg bg-slate-800/90 text-slate-300 border border-slate-700/60 hover:border-green-500/40 hover:text-green-400 transition-colors"
+                          >
+                            {item}
+                          </span>
+                        ))}
                   </div>
                 </div>
               </div>
