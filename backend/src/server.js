@@ -32,9 +32,22 @@ import resumeRoutes from "./routes/resume.routes.js";
 import contactRoutes from "./routes/contact.routes.js";
 import preferrenceRoutes from "./routes/preferrence.routes.js";
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://mine-mifd-three.vercel.app",
+];
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174", "https://mine-mifd-three.vercel.app"],
+    origin: allowedOrigins,
+    credentials: true,
+  }),
+);
+
+app.use(
+  cors({
+    origin: allowedOrigins,
     credentials: true,
   }),
 );
