@@ -64,7 +64,13 @@ app.use("/api/preferrence", verify, preferrenceRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/contact", contactRoutes);
 
-app.listen(process.env.PORT, () => {
-  connectDB();
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
-});
+connectDB();
+export default app;
+
+if (process.env.NODE_ENV !== "production") {
+  app.listen(process.env.PORT, () => {
+    console.log(
+      `Server is running on http://localhost:${process.env.PORT}`,
+    );
+  });
+}

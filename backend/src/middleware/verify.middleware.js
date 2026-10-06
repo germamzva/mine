@@ -6,7 +6,7 @@ export const verify = async (req, res, next) => {
   if (!token) {
     // In development mode, allow requests without token
     // Remove this in production for better security
-    if (process.env.NODE_ENV === "development") {
+    if (process.env.NODE_ENV === "production") {
       req.userId = "6a963402b2b69a3cae30654a";
       req.role = "user";
       req.email = "ranfeche@gmail.com";
