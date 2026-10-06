@@ -51,14 +51,15 @@ interface PDFDocumentProps {
 
 /**
  * Skill types for categorizing skills
- * @enum {string}
  */
-enum SkillType {
-    frontend = "frontend",
-    backend = "backend",
-    cms = "cms",
-    others = "others",
-}
+const SkillType = {
+  frontend: "frontend",
+  backend: "backend",
+  cms: "cms",
+  others: "others",
+} as const;
+
+type SkillType = (typeof SkillType)[keyof typeof SkillType];
 
 // remove html tags
 const stripHtml = (html?: string) => {
@@ -73,7 +74,7 @@ const stripHtml = (html?: string) => {
         .trim();
 };
 
-const PDFDocument = ({ user, resume }: PDFDocumentProps) => {
+const PDFDocument = ({ resume }: PDFDocumentProps) => {
 
     return (
         <>

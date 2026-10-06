@@ -31,7 +31,7 @@ export default function Gsap() {
       // Animate each dot
       gsap.utils.toArray(".timeline-dot").forEach((dot) => {
         console.log(dot);
-        gsap.to(dot, {
+        gsap.to(dot as gsap.TweenTarget, {
           backgroundColor: "#fff",
           scale: 1.5,
           boxShadow: "0 0 15px white",

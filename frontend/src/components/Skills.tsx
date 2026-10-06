@@ -1,5 +1,3 @@
-import React from "react";
-
 // hooks
 import { useCurrentUser } from "../utils/useCurrentUser";
 import { useResumeInfo } from "../utils/useResumeInfo";
@@ -8,12 +6,14 @@ type Props = {
   aniClass?: string;
 };
 
-enum SkillType {
-  frontend = "frontend",
-  backend = "backend",
-  cms = "cms",
-  others = "others",
-}
+const SkillType = {
+  frontend: "frontend",
+  backend: "backend",
+  cms: "cms",
+  others: "others",
+} as const;
+
+type SkillType = typeof SkillType[keyof typeof SkillType];
 
 export default function Skills({ aniClass }: Props) {
 

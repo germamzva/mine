@@ -1,9 +1,9 @@
-import React, { createContext, useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
 
 // type
 type ThemeContextType = {
     theme: "light" | "dark";
-    setTheme: () => void;
+    setTheme: React.Dispatch<React.SetStateAction<"light" | "dark">>;
     toggleTheme: () => void;
 };
 
@@ -14,7 +14,7 @@ export const ThemeContext = createContext<ThemeContextType>({
 });
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-    const [theme, setTheme] = React.useState<"light" | "dark">(() => {
+    const [theme, setTheme] = useState<"light" | "dark">(() => {
         const savedTheme = localStorage.getItem("theme");
         return savedTheme === "dark" ? "dark" : "light";
     });
